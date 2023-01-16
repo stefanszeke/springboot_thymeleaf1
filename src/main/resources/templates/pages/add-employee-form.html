@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="~{fragments/_head} "></div>
+    <title>Employees list</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+    
+        <h2>Add Employee</h2>
+        <hr>
+
+        <form th:action="@{/}" th:object="${newEmployee}" method="POST" >
+            <div class="input-group mb-3">
+                <span class="input-group-text">Name: </span>
+                <input type="text" class="form-control" id="name" th:field="*{name}">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Email: </span>
+                <input type="email" class="form-control" id="email" th:field="*{email}">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Department: </span>
+                <input type="text" class="form-control" id="department" th:field="*{department}">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="hidden" th:field="*{id}">
+        </form>
+
+        <a th:href="@{/}" class="btn btn-info mt-5">back</a>
+
+    </div>
+    
+</body>
+</html>
