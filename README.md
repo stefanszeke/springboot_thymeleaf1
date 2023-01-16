@@ -1,1 +1,3 @@
-# springboot_thymeleaf1
+# springboot thymeleaf
+
+with 'bootstrap' and 'https://datatables.net/'
